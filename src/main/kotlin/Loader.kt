@@ -65,10 +65,18 @@ class Loader: JavaPlugin(), Listener, CommandExecutor {
                     if (sender.isOp) {
                         if (args.size == 1 && args[0] == "query") {
                             sender.sendMessage("The Damage from Endcrystals to Shields is currently $shilddamage%")
-                        } else if (args.size == 2 && args[0] == "set" && 0 <= args[1].toInt() && args[1].toInt() <= 100) {
-                            shilddamage = args[1].toInt()
-                            File("CrystalDamage.properties").writeText("CrystalDamage: ${shilddamage.toString()}")
-                            sender.sendMessage("The Damage from Endcrystals to Shields ist now set to $shilddamage%")
+                        } else if (args.size == 2 && args[0] == "set") {
+                            try {
+                                var damage = args[1].toInt()
+                                if (damage in 0..100) {
+                                    shilddamage = damage
+                                    File("CrystalDamage.properties").writeText("CrystalDamage: ${shilddamage.toString()}")
+                                    sender.sendMessage("The Damage from Endcrystals to Shields ist now set to $shilddamage%")
+                                }
+                            }
+                            catch (e: Exception) {
+                                sender.sendMessage("§cYou can only use Intagers between 0 and 100!§r")
+                            }
                         }
                         else {
                             sender.sendMessage("§r/crystaldamage query §cto view the current value or§r\n/crystaldamage set [0-100] §cto set the value§r")
