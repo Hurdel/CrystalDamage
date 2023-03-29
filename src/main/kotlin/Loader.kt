@@ -24,12 +24,12 @@ class Loader: JavaPlugin(), Listener, CommandExecutor {
 
     override fun onEnable() {
         Bukkit.getPluginManager().registerEvents(this, this)
-        if (!File("CrystalDamage.properties").exists()) {
-            File("CrystalDamage.properties").createNewFile()
-            File("CrystalDamage.properties").writeText("CrystalDamage: ${shilddamage.toString()}")
+        if (!File("CrystalDamage.yml").exists()) {
+            File("CrystalDamage.yml").createNewFile()
+            File("CrystalDamage.yml").writeText("CrystalDamage: ${shilddamage.toString()}")
         }
         else {
-            var filetext = File("CrystalDamage.properties").readText().split(" ")
+            var filetext = File("CrystalDamage.yml").readText().split(" ")
             if (filetext[0].contains("CrystalDamage:")) {
                 shilddamage = (filetext[1]).toInt()
             }
@@ -70,7 +70,7 @@ class Loader: JavaPlugin(), Listener, CommandExecutor {
                                 var damage = args[1].toInt()
                                 if (damage in 0..100) {
                                     shilddamage = damage
-                                    File("CrystalDamage.properties").writeText("CrystalDamage: ${shilddamage.toString()}")
+                                    File("CrystalDamage.yml").writeText("CrystalDamage: ${shilddamage.toString()}")
                                     sender.sendMessage("The Damage from Endcrystals to Shields ist now set to $shilddamage%")
                                 }
                             }
