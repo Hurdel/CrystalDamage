@@ -4,5 +4,5 @@ description: changes the damage from endcrystals to the shield
 main: CrystalDamageMain.Loader
 commands:
   crystaldamage:
-    description: changes the damage to the shield (0-100) from Endcrystalexplotions/query it
+    description: changes the damage to the shield (0%-100%) from Endcrystalexplotions/query it
     usage: /command set [percentage]/query
