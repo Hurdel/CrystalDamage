@@ -5,7 +5,7 @@ plugins {
 }
 
 group 'tv.dontreal'
-version '0.1'
+version ''
 
 repositories {
     mavenCentral()

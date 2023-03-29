@@ -1,5 +1,5 @@
 name: CrystalDamage
-version: 0.1
+version: 1.0
 description: changes the damage from endcrystals to the shield
 main: CrystalDamageMain.Loader
 commands:
