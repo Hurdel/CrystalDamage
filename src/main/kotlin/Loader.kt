@@ -29,7 +29,10 @@ class Loader: JavaPlugin(), Listener, CommandExecutor {
             File("CrystalDamage.properties").writeText("CrystalDamage: ${shilddamage.toString()}")
         }
         else {
-            shilddamage = (File("CrystalDamage.properties").readText().split(" ")[1]).toInt()
+            var filetext = File("CrystalDamage.properties").readText().split(" ")
+            if (filetext[0].contains("CrystalDamage:")) {
+                shilddamage = (filetext[1]).toInt()
+            }
         }
     }
 
