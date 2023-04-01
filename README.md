@@ -2,7 +2,7 @@
 This Plugin controlls the damage from shields taken by End-Crystal-Explosions.
 
 #### Version:
-1.19.4
+1.19.x (1.19.3 wored in the test)
 
 ## The Idee:
 The Idea for this project came from this pluginrequest on the bukkit.org forums <https://bukkit.org/threads/end-crystal-damage.500753/>
@@ -23,6 +23,3 @@ This Project is free to use, but linked to the original Author.
 
 ## Author:
 * This Project was created by me alone
-  * [Twitch](<https://www.twitch.tv/7_bag> "7_bag")
-  * [YouTube](<https://www.youtube.com/@dontreal> "Don't Real")
-  * [YouTube](<https://www.youtube.com/@master_of_spirit> "Master of Spirit")
